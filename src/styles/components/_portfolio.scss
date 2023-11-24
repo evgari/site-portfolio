@@ -1,0 +1,133 @@
+.portfolio {
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @media(max-width: $r_mob_500) {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 194px;
+
+    @media(max-width: $r_tab_900) {
+      margin-bottom: 106px;
+    }
+  }
+
+  &__progect {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 59px;
+
+    @media(max-width: $r_desk) {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    @media(max-width: $r_mob_500) {
+      padding-bottom: 38px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+
+      @media(max-width: $r_mob_500) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &-title {
+      margin-bottom: 39px;
+      font-weight: 700;
+      font-size: 27px;
+      letter-spacing: 0.7px;
+
+      @media(max-width: $r_mob_500) {
+        margin-bottom: 20px;
+        font-size: 16px;
+        letter-spacing: initial;
+      }
+    }
+
+    &-list {
+      margin: 0;
+      margin-bottom: 40px;
+      padding-left: 0;
+      list-style-type: none;
+
+      @media(max-width: $r_mob_500) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-item {
+      font-size: 16px;
+
+      @media(max-width: $r_mob_500) {
+        font-size: 12px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &::before {
+        content: '\2013';
+        margin-right: 5px;
+      }
+    }
+
+    &-worktime {
+      font-weight: 700;
+      font-size: 16px;
+
+      @media(max-width: $r_mob_500) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__content {
+    padding-top: 41px;
+
+    @media(max-width: $r_desk) {
+      padding-top: 0;
+    }
+  }
+
+  &__image {
+    position: relative;
+  }
+
+  &__link {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__img {    
+    display: block;
+  }
+
+  &__decore {
+    top: -80px;
+    left: 51%;
+    width: 465px;
+    height: 465px;
+    transform: translateX(-50%);
+
+    @media(max-width: $r_desk) {
+      width: 300px;
+      height: 300px;
+    }
+
+    @media(max-width: $r_mob_500) {
+      top: -31px;
+      right: -98px;
+      left: initial;
+      width: 197px;
+      height: 197px;
+    }
+  }
+}

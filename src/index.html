@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио WEB-разработчика</title>
+  <link rel="preload" href="fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <nav class="nav header__nav">
+        <ul class="list-reset nav__list">
+          <li class="nav__item">
+            <a href="#" class="header__link">Обо мне</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="header__link">Портфолио</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="header__link">Этапы работ</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="header__link">Цены</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="header__link">Обратная связь</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__links">
+        <a href="tel:+79237777777" class="header__link header__phone">8 923 777-77-77</a>
+        <a href="mailto:alexdev@gmail.com" class="header__link header__email">alexdev@gmail.com</a>
+      </div>
+      <button class="btn-reset burger-btn">
+        <svg class="burger-btn__icon" width="26" height="20" viewbox="0 0 26 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+          <rect width="26" height="2" rx="0"/>
+          <rect y="9" width="26" height="2" rx="0"/>
+          <rect y="18" width="26" height="2" rx="0"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <div class="container hero__container">
+      <img src="./images/hero-image.jpg" alt="фото Александр Антропов" class="hero__image">
+      <h1 class="title title_big hero__title">
+        <span class="hero__title-span">Александр Антропов</span>
+        web-разработчик
+        <span class="decore hero__title-decore"></span>
+      </h1>
+      <div class="border-block hero__socials">
+        <a href="" class="discussion">Обсудить проект</a>
+        <div class="hero__links">
+          <span class="decore hero__links-decore"></span>
+          <a href="#" class="hero__link" target="_blank" aria-label="я в Вк">Vk</a>
+          <a href="#" class="hero__link" target="_blank" aria-label="я в Instagram">Instagram</a>
+          <a href="#" class="hero__link" target="_blank" aria-label="я в Linkedin">Linkedin</a>
+        </div>
+      </div>
+      <ul class="list-reset hero__skills">
+        <li class="hero__item">
+          <p class="hero__item-title">FRONT-END</p>
+          <p class="hero__item-descr">HTML+CSS+JS кодирование дизайнов любой сложности</p>
+        </li>
+        <li class="hero__item">
+          <p class="hero__item-title">Back-end</p>
+          <p class="hero__item-descr">Разработка сложной back-end логики для готового front-end</p>
+        </li>
+        <li class="hero__item">
+          <p class="hero__item-title">WORDPRESS</p>
+          <p class="hero__item-descr">Разработка сайтов - от&nbsp;блога до&nbsp;интернет магазина</p>
+        </li>
+        <li class="hero__item">
+          <p class="hero__item-title">SEO продвижение</p>
+          <p class="hero__item-descr">Качественное улучшение позиций сайта в поисковой выдаче</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="container">
+      <div class="border-block about__top">
+        <h2 class="title about__title">Обо мне</h2>
+        <p class="description about__descr">
+          Создаю только эффективные решения, которые работают на&nbsp;результат: от&nbsp;одностраничных сайтов, до&nbsp;крупных интернет-порталов.
+        </p>
+      </div>
+      <ul class="list-reset about__list">
+        <li class="about__item about__item_1">
+          <p class="about__item-title">Контроль</p>
+          <p class="about__item-descr">Предоставление результатов на&nbsp;каждом этапе работы c&nbsp;возможностью внести правки</p>
+        </li>
+        <li class="about__item about__item_2">
+          <p class="about__item-title">Ответственность</p>
+          <p class="about__item-descr">Фриланс как основная деятельность, что означает полную отдачу в&nbsp;процессе работы над заказом</p>
+        </li>
+        <li class="about__item about__item_3">
+          <p class="about__item-title">Исполнительность</p>
+          <p class="about__item-descr">Внимательность ко всем требованиям заказчика и&nbsp;прояснение любых моментов</p>
+        </li>
+        <li class="about__item about__item_4">
+          <p class="about__item-title">Качество</p>
+          <p class="about__item-descr">Высокое качество как графических материалов, так&nbsp;и&nbsp;внутренних алгоритмов работы сайта</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="work">
+    <div class="container">
+      <ol class="work__list">
+        <li class="border-block work__item">
+          <p class="work__caption">Вы заказываете сайт</p>          
+          <p class="work__descr">Связываетесь со&nbsp;мной по&nbsp;телефону или через заявку на&nbsp;сайте</p>
+        </li>
+        <li class="border-block work__item">          
+          <p class="work__caption">Обговариваем детали</p>
+          <p class="work__descr">Созваниваемся или списываемся любым удобным для вас способом</p>
+        </li>
+        <li class="border-block work__item">
+          <p class="work__caption">Этап программирования</p>          
+          <p class="work__descr">Верстаю сайт по вашему проекту пиксель в&nbsp;пиксель</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <section class="portfolio">
+    <div class="container portfolio__container">
+      <h2 class="title title_big portfolio__title">
+        Портфолио
+        <span class="decore portfolio__decore"></span>
+      </h2>
+      <article class="border-block portfolio__progect">
+        <div class="portfolio__content">
+          <h3 class="portfolio__progect-title">Agata Bielen</h3>
+          <ul class="portfolio__progect-list">
+            <li class="portfolio__progect-item">верстка по макету из Figma</li>
+            <li class="portfolio__progect-item">наполнение сайта контентом</li>
+            <li class="portfolio__progect-item">внедрена функция добавления видео</li>
+          </ul>
+          <p class="portfolio__progect-worktime">Затрачено времени: 5 рабочих дней</p>
+        </div>
+        <div class="portfolio__image">
+          <img class="portfolio__img" src="./images/maket-1.jpg" alt="макет тренировки онлайн">
+          <a href="#" class="portfolio__link" target="_blank"></a>
+        </div>        
+      </article>
+      <article class="border-block portfolio__progect">
+        <div class="portfolio__content">
+          <h3 class="portfolio__progect-title">Lemon</h3>
+          <ul class="portfolio__progect-list">
+            <li class="portfolio__progect-item">верстка по макету из PSD</li>
+            <li class="portfolio__progect-item">доступен функционал получения заказов</li>
+            <li class="portfolio__progect-item">реализована кнопка «Заказать в 1 клик»</li>
+          </ul>
+          <p class="portfolio__progect-worktime">Затрачено времени: 7 рабочих дней</p>
+        </div>
+        <div class="portfolio__image">
+          <img class="portfolio__img" src="./images/maket-2.jpg" alt="макет Healthy food">
+          <a href="#" class="portfolio__link" target="_blank"></a>
+        </div>                
+      </article>
+    </div>
+  </section>
+
+  <div class="benefits">
+    <div class="container benefits__container">
+      <p class="benefits__descr">
+        Помимо создания сайтов и посадочных страниц я&nbsp;занимаюсь: настройкой контекстной рекламы в системах Яндекс.Директ и Google AdWords, а так же&nbsp;поисковым продвижением сайтов
+      </p>
+      <ul class="list-reset benefits__list">
+        <li class="benefits__item benefits__item_1">
+          <p class="benefits__item-title">Актуальные цены</p>
+          <p class="benefits__item-descr">Ничего лишнего, без переплат, 100% отработка ваших денег</p>
+        </li>
+        <li class="benefits__item benefits__item_2">
+          <p class="benefits__item-title">Более 2-х лет опыта</p>
+          <p class="benefits__item-descr">Это моя основная деятельность, создано более 150+ сайтов</p>
+        </li>
+        <li class="benefits__item benefits__item_3">
+          <p class="benefits__item-title">Оптимальные сроки</p>
+          <p class="benefits__item-descr">Создание сайта любой сложности в&nbsp;самые сжатые сроки</p>
+        </li>
+        <li class="benefits__item benefits__item_4">
+          <p class="benefits__item-title">Всегда на связи</p>
+          <p class="benefits__item-descr">Не теряюсь и не проматываю сроки. Подхожу ответственно</p>
+        </li>
+        <li class="benefits__item benefits__item_5">
+          <p class="benefits__item-title">Чистый код</p>
+          <p class="benefits__item-descr">HTML код без всего лишнего, плюс адаптив под все устройства</p>
+        </li>
+        <li class="benefits__item benefits__item_6">
+          <p class="benefits__item-title">Поддержка сайта</p>
+          <p class="benefits__item-descr">Быстро устраню любую проблему на вашем сайте</p>
+        </li>
+      </ul>
+      <table class="table benefits__table">
+        <tr class="table__row">
+          <td class="table__col">
+            <img src="./images/html5.svg" alt="" class="table__icon">
+          </td>
+          <td class="table__col">
+            <img src="./images/css3.svg" alt="" class="table__icon">
+          </td>
+          <td class="table__col">
+            <img src="./images/js.svg" alt="" class="table__icon">
+          </td>
+          <td class="table__col">
+            <img src="./images/jquery.svg" alt="" class="table__icon">
+          </td>
+        </tr>
+        <tr class="table__row">
+          <td class="table__col">
+            <img src="./images/boot.svg" alt="" class="table__icon">
+          </td>
+          <td class="table__col">
+            <img src="./images/php.svg" alt="" class="table__icon">
+          </td>
+          <td class="table__col">
+            <img src="./images/vue.svg" alt="" class="table__icon">
+          </td>
+          <td class="table__col">
+            <img src="./images/wp.svg" alt="" class="table__icon">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <section class="pricing">
+    <div class="container pricing__container">
+      <div class="border-block pricing__top">
+        <h2 class="title pricing__title">
+          Тарифы
+          <span class="decore"></span>
+        </h2>
+        <p class="description pricing__descr">
+          Представленные ниже цены зависят не&nbsp;только от того какой сайт вы хотите. Конечная цена будет озвучена после прочтения Вашего ТЗ
+        </p>
+      </div>
+      <ul class="list-reset pricing__list">
+        <li class="pricing__item border-block service">
+          <div class="service__left">
+            <p class="service__title">Разработка
+            лэндинга или сайт визитки</p>
+            <p class="service__descr">Небольшой сайт состоящий из одной страницы</p>
+            <a href="" class="discussion">Обсудить проект</a>
+          </div>
+          <div class="service__right">
+            <p class="service__text">Что входит</p>
+            <ul class="service__list">
+              <li class="service__item">Сайт на CMS WordPress</li>
+              <li class="service__item">Одна посадочная страница</li>
+              <li class="service__item">От 7 дней</li>
+            </ul>
+            <p class="service__price">От 7 000 Р</p>
+          </div>
+        </li>
+
+        <li class="pricing__item border-block service">
+          <div class="service__left">
+            <p class="service__title">Разработка
+            корпоративного сайта</p>
+            <p class="service__descr">Небольшой сайт с n-количеством страниц</p>
+            <a href="" class="discussion">Обсудить проект</a>
+          </div>
+          <div class="service__right">
+            <p class="service__text">Что входит</p>
+            <ul class="service__list">
+              <li class="service__item">Сайт на CMS WordPress</li>
+              <li class="service__item">От 2-10 страниц</li>
+              <li class="service__item">От 15 дней</li>
+            </ul>
+            <p class="service__price">От 10 000 Р</p>
+          </div>
+        </li>
+
+        <li class="pricing__item border-block service">
+          <div class="service__left">
+            <p class="service__title">Разработка
+            интернет - магазина</p>
+            <p class="service__descr">Полноценный каталог вашей продукции</p>
+            <a href="" class="discussion">Обсудить проект</a>
+          </div>
+          <div class="service__right">
+            <p class="service__text">Что входит</p>
+            <ul class="service__list">
+              <li class="service__item">Сайт на CMS WordPress</li>
+              <li class="service__item">От 2-10 страниц, корзина, карточка товара</li>
+              <li class="service__item">От 20 дней</li>
+            </ul>
+            <p class="service__price">От 15 000 Р</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>

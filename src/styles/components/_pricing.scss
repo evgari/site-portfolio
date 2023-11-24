@@ -1,0 +1,131 @@
+.pricing {
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @media(max-width: $r_mob_500) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding-bottom: 79px;
+
+    @media(max-width: $r_tab) {
+      flex-direction: column;
+    }
+
+    @media(max-width: $r_mob_500) {
+      margin-bottom: 40px;
+      padding-bottom: 29px;
+    }
+  }
+
+  &__title {
+    letter-spacing: 0.8px;
+
+    @media(max-width: $r_tab) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__descr {
+    max-width: 560px;
+
+    @media(max-width: $r_tab_900) {
+      max-width: 400px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+
+      @media(max-width: $r_mob_500) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+.service {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 60px;
+  column-gap: 20px;
+
+  @media(max-width: $r_mob_500) {
+    grid-template-columns: 0.85fr 1.15fr;
+    padding-bottom: 35px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 28px;
+    white-space: pre-line;
+
+    @media(max-width: $r_tab) {
+      font-size: 18px;
+    }
+
+    @media(max-width: $r_mob_500) {
+      font-size: 16px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 75px;
+    font-weight: 500;
+    font-size: 16px;
+
+    @media(max-width: $r_mob_500) {
+      margin-bottom: 12px;
+      font-size: 10px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 16px;
+
+    @media(max-width: $r_mob_500) {
+      font-size: 12px;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    margin-bottom: 44px;
+    padding-left: 0;
+    list-style-type: disc;
+    list-style-position: inside;
+
+    @media(max-width: $r_mob_500) {
+      margin-bottom: 29px;
+    }
+  }
+
+  &__item {
+    font-size: 16px;
+
+    @media(max-width: $r_tab) {
+      font-size: 12px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 42px;
+
+    @media(max-width: $r_tab) {
+      font-size: 22px;
+    }
+  }
+}
