@@ -14,6 +14,10 @@
 
   &__title {
     letter-spacing: 1.2px;
+
+    @media(max-width: $r_mob_500) {
+      letter-spacing: 0.5px;
+    }
   }
 
   &__top {
@@ -54,7 +58,7 @@
     }
 
     @media(max-width: $r_mob_500) {
-      gap: 30px 10px;
+      gap: 30px 0;
       padding-top: 40px;
     }
   }
@@ -105,6 +109,7 @@
       }
 
       @media(max-width: $r_mob_500) {
+        max-width: 150px;
         font-size: 10px;
       }
     }

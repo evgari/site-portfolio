@@ -1,0 +1,252 @@
+.contact {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media(max-width: $r_mob_500) {
+    padding-top: 40px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 59px;
+
+    @media(max-width: $r_tab) {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    @media(max-width: $r_mob_500) {
+      padding-bottom: 29px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    max-width: 290px;
+    letter-spacing: 1px;
+
+    @media(max-width: $r_mob_500) {
+      max-width: 180px;
+      letter-spacing: 0.5px;
+    }
+
+    &-decore {
+      top: -26px;
+      left: -151px;
+      width: 300px;
+      height: 300px;
+
+      @media(max-width: $r_tab_900) {
+        width: 135px;
+        height: 135px;
+      }
+
+      @media(max-width: $r_mob_500) {
+        top: -52px;
+        left: -52px;
+        width: 190px;
+        height: 190px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50px;
+        left: -25px;
+        display: block;
+        width: 66px;
+        height: 72px;
+        background-image: url(../images/decor.svg);
+        background-repeat: no-repeat;
+
+        @media(max-width: $r_mob_500) {
+          top: 9px;
+          right: 2px;
+          left: initial;
+          width: 25px;
+          height: 28px;
+          background-size: cover;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  &__descr {
+    padding-right: 77px;
+    max-width: 560px;
+
+    @media(max-width: $r_desk) {
+      padding-right: 0;
+      max-width: 483px;
+    }
+
+    @media(max-width: $r_tab_900) {
+      max-width: 400px;
+    }
+
+    @media(max-width: $r_mob_500) {
+      max-width: 276px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    padding-bottom: 129px;
+
+    @media(max-width: $r_tab) {
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 60px;
+    }
+
+    @media(max-width: $r_mob_500) {
+      padding-top: 40px;
+      padding-bottom: 60px;
+    }
+  }
+
+  &__links {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 56px;
+
+    @media(max-width: $r_tab) {
+      gap: 20px;
+    }
+  }
+
+  &__form {
+    min-width: 560px;
+
+    @media(max-width: $r_desk) {
+      min-width: 400px;
+    }
+
+    @media(max-width: $r_mob_500) {
+      width: 100%;
+      min-width: auto;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 11px;
+    font-size: 12px;
+
+    @media(max-width: $r_mob_500) {
+      margin-bottom: 8px;
+      font-size: 10px;
+    }
+  }
+
+  &__input {
+    border: 0;
+    margin-bottom: 19px;
+    padding: 24.5px 20px;
+    width: 100%;
+    background-color: #e0e0e0;
+
+    @media(max-width: $r_mob_500) {
+      padding: 22px 20px;
+      font-size: 10px;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    margin-top: 39px;
+    padding: 23.5px 20px;
+    font-weight: 700;
+    font-size: 16px;
+    color: $light-color;
+    background-color: $accent-color;
+    transition: background-color .3s ease-in-out;
+
+    @media(max-width: $r_mob_500) {
+      margin-top: 31px;
+      padding: 20.5px 20px;
+      font-size: 12px;
+    }
+
+    &:hover {
+      background-color:  #ea0e00;
+    }
+  }
+}
+
+.choices {
+  margin-bottom: 0;
+}
+
+.choices__inner {
+  border: 0;
+  padding: 23.5px 20px!important;
+  min-height: auto;
+  font-size: 12px;
+  line-height: 1.5;
+  color: $dark-color;
+  background-color: #e0e0e0;
+
+  @media(max-width: $r_mob_500) {
+    padding: 20px 20px!important;
+    font-size: 10px;
+  }
+}
+
+.choices__list--single {
+  padding: 0;
+}
+
+.is-open .choices__inner,
+.choices__list--dropdown,
+.is-open .choices__list--dropdown {
+  border: 0;
+  color: rgba(1, 1, 1, 0.4);
+  background-color: #e0e0e0;
+}
+
+.is-highlighted.choices__item {
+  color: rgb(1, 1, 1);
+}
+
+.is-active .choices__item::after,
+.choices__item.is-selected {
+  display: none;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted {
+  background-color: #e0e0e0!important;
+}
+
+.contact__form .choices {
+  &::after {
+    top: 51%;
+    right: 23.5px;
+    z-index: 10;
+    border: 0;
+    width: 12px;
+    height: 7px;
+    background-image: url(../images/icons/drop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.choices.is-open::after {
+  top: 51%;
+  transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
