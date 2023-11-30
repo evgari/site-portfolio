@@ -4,16 +4,71 @@ import './styles/main.scss';
 const anchors = document.querySelectorAll('.js-scroll-to');
 
 const select = () => {
-  const element = document.querySelector('.js-choice');
-  const choices = new Choices(element, {
-    searchEnabled: false,
-    shouldSort: false,
-    itemSelectText: '',
-    position: 'bottom',
+  const elements = document.querySelectorAll('.js-choice');
+
+  elements.forEach(element => {
+    const choices = new Choices(element, {
+      searchEnabled: false,
+      shouldSort: false,
+      itemSelectText: '',
+      position: 'bottom',
+      allowHTML: true,
+    });
   });
 };
 
-select();
+const burgerController = ({btnOpen, btnClose, menu}) => {
+  const burgerBtn = document.querySelector(btnOpen);
+  const burgerMenu = document.querySelector(menu);
+  const activeClass = `${menu.slice(1)}_active`;
+
+  burgerBtn.addEventListener('click', () => {
+    burgerMenu.classList.add(activeClass);
+  });
+  
+  burgerMenu.addEventListener('click', event => {
+    const target = event.target;
+  
+    if(target === burgerMenu || target.closest(btnClose)) {    
+      burgerMenu.classList.remove(activeClass);
+    }
+  });
+};
+
+const modalController = ({modal, btnOpen, btnClose}) => {
+  const modalBtns = document.querySelectorAll(btnOpen);
+  const modalElem = document.querySelector(modal);
+
+  modalElem.style.cssText = `
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  `;
+
+  const closeModal = event => {
+    const target = event.target;
+  
+    if(target === modalElem || target.closest(btnClose)) {    
+      modalElem.style.opacity = '0';
+  
+      setTimeout(() => {
+        modalElem.style.visibility = 'hidden';
+      }, 300);
+    }
+  };
+  
+  const openModal = () => {
+    modalElem.style.visibility = 'visible';
+    modalElem.style.opacity = '1';
+  };
+  
+  modalBtns.forEach(btn => {
+    btn.addEventListener('click', openModal);
+  });
+  
+  modalElem.addEventListener('click', closeModal);
+}
 
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (e) {
@@ -27,6 +82,21 @@ for (let anchor of anchors) {
     })
   })
 };
+
+select();
+
+burgerController({
+  btnOpen: '.burger',
+  btnClose: '.js-burger-close',
+  menu: '.header__nav'
+});
+
+modalController({
+  modal: '.modal',
+  btnOpen: '.discussion',
+  btnClose: '.js-modal-close'
+});
+
 
 
 

@@ -15,6 +15,12 @@
   <header class="header">
     <div class="container header__container">
       <nav class="nav header__nav">
+        <button class="btn-reset close js-burger-close">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <rect width="25.288" height="2.06669" transform="matrix(0.69782 0.716273 -0.69782 0.716273 2.35352 0.388428)"/>
+            <rect width="25.8556" height="2.06669" transform="matrix(0.69782 -0.716273 0.69782 0.716273 0 18.5198)"/>
+          </svg>
+        </button>
         <ul class="list-reset nav__list">
           <li class="nav__item">
             <a href="#about" class="link js-scroll-to">Обо мне</a>
@@ -32,12 +38,21 @@
             <a href="#feedback" class="link js-scroll-to">Обратная связь</a>
           </li>
         </ul>
+        <div class="header__links header__links_mobile">
+          <a href="tel:+79237777777" class="link header__phone">8 923 777-77-77</a>
+          <a href="mailto:alexdev@gmail.com" class="link header__email">alexdev@gmail.com</a>
+        </div>
+        <div class="social header__social">
+          <a href="#" class="social__link" target="_blank" aria-label="я в Вк">Vk</a>
+          <a href="#" class="social__link" target="_blank" aria-label="я в Instagram">Instagram</a>
+          <a href="#" class="social__link" target="_blank" aria-label="я в Linkedin">Linkedin</a>
+        </div>
       </nav>
       <div class="header__links">
         <a href="tel:+79237777777" class="link header__phone">8 923 777-77-77</a>
         <a href="mailto:alexdev@gmail.com" class="link header__email">alexdev@gmail.com</a>
       </div>
-      <button class="btn-reset burger-btn">
+      <button class="btn-reset burger">
         <svg class="burger-btn__icon" width="26" height="20" viewbox="0 0 26 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
           <rect width="26" height="2" rx="0"/>
           <rect y="9" width="26" height="2" rx="0"/>
@@ -54,12 +69,12 @@
         <h1 class="title title_big hero__title">
           <span class="hero__title-span">Александр Антропов</span>
           web-разработчик
-          <span class="decore hero__title-decore"></span>
+          <span class="decore hero__title-decore" aria-hidden="true"></span>
         </h1>
         <div class="border-block hero__socials">
-          <a href="" class="discussion">Обсудить проект</a>
+          <button class="btn-reset discussion">Обсудить проект</button>
           <div class="social hero__links">
-            <span class="decore hero__links-decore"></span>
+            <span class="decore hero__links-decore" aria-hidden="true"></span>
             <a href="#" class="social__link" target="_blank" aria-label="я в Вк">Vk</a>
             <a href="#" class="social__link" target="_blank" aria-label="я в Instagram">Instagram</a>
             <a href="#" class="social__link" target="_blank" aria-label="я в Linkedin">Linkedin</a>
@@ -138,7 +153,7 @@
       <div class="container portfolio__container">
         <h2 class="title title_big portfolio__title">
           Портфолио
-          <span class="decore portfolio__decore"></span>
+          <span class="decore portfolio__decore" aria-hidden="true"></span>
         </h2>
         <article class="border-block portfolio__progect">
           <div class="portfolio__content">
@@ -167,7 +182,7 @@
           </div>
           <div class="portfolio__image">
             <img class="portfolio__img" src="./images/maket-2.jpg" alt="макет Healthy food">
-            <a href="#" class="portfolio__link" target="_blank"></a>
+            <a href="https://evgari.github.io/Module02-Shop/dist/" class="portfolio__link" target="_blank"></a>
           </div>                
         </article>
       </div>
@@ -242,7 +257,7 @@
         <div class="border-block pricing__top">
           <h2 class="title pricing__title">
             Тарифы
-            <span class="decore pricing__decore pricing__decore_1"></span>
+            <span class="decore pricing__decore pricing__decore_1" aria-hidden="true"></span>
           </h2>
           <p class="description pricing__descr">
             Представленные ниже цены зависят не&nbsp;только от того какой сайт вы хотите. Конечная цена будет озвучена после прочтения Вашего ТЗ
@@ -254,7 +269,7 @@
               <p class="service__title">Разработка
               лэндинга или сайт визитки</p>
               <p class="service__descr">Небольшой сайт состоящий из одной страницы</p>
-              <a href="" class="discussion">Обсудить проект</a>
+              <button class="btn-reset discussion">Обсудить проект</button>
             </div>
             <div class="service__right">
               <p class="service__text">Что входит</p>
@@ -264,7 +279,7 @@
                 <li class="service__item">От 7 дней</li>
               </ul>
               <p class="service__price">От 7 000 Р
-                <span class="decore pricing__decore pricing__decore_2"></span>
+                <span class="decore pricing__decore pricing__decore_2" aria-hidden="true"></span>
               </p>
             </div>
           </li>
@@ -274,7 +289,7 @@
               <p class="service__title">Разработка
               корпоративного сайта</p>
               <p class="service__descr">Небольшой сайт с&nbsp;n&nbsp;-&nbsp;количеством страниц</p>
-              <a href="" class="discussion">Обсудить проект</a>
+              <button class="btn-reset discussion">Обсудить проект</button>
             </div>
             <div class="service__right">
               <p class="service__text">Что входит</p>
@@ -292,7 +307,7 @@
               <p class="service__title">Разработка
               интернет - магазина</p>
               <p class="service__descr">Полноценный каталог вашей продукции</p>
-              <a href="" class="discussion">Обсудить проект</a>
+              <button class="btn-reset discussion" >Обсудить проект</button>
             </div>
             <div class="service__right">
               <p class="service__text">Что входит</p>
@@ -302,7 +317,7 @@
                 <li class="service__item">От 20 дней</li>
               </ul>
               <p class="service__price">От 15 000 Р
-                <span class="decore pricing__decore pricing__decore_2"></span>
+                <span class="decore pricing__decore pricing__decore_2" aria-hidden="true"></span>
               </p>
             </div>
           </li>
@@ -315,7 +330,7 @@
         <div class="border-block contact__top">
           <h2 class="title contact__title">
             Расскажите о&nbsp;своем проекте
-            <span class="decore contact__title-decore"></span>
+            <span class="decore contact__title-decore" aria-hidden="true"></span>
           </h2>
           <p class="description contact__descr">
             Воспользуйтесь формой обратной связи, чтобы обсудить ваш проект, заполните все поля, и&nbsp;я&nbsp;свяжусь
@@ -330,7 +345,7 @@
           </div>
           <form class="contact__form">
             <label class="contact__label" for="tel">Телефон или почта</label>
-            <input id="tel" class="contact__input" type="text" placeholder="Введите телефон" name="contact">
+            <input id="tel" class="contact__input" type="text" placeholder="Введите телефон" name="contact" required>
             <label class="contact__label" for="messenger">Выберите удобный способ связи</label>
             <select id="messenger" class="js-choice" name="feedback">
               <option value="telegram" selected>Telegram</option>
@@ -377,6 +392,34 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal">
+    <div class="modal__main">
+      <div class="border-block modal__top">
+        <button class="btn-reset close js-modal-close">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <rect width="25.288" height="2.06669" transform="matrix(0.69782 0.716273 -0.69782 0.716273 2.35352 0.388428)"/>
+            <rect width="25.8556" height="2.06669" transform="matrix(0.69782 -0.716273 0.69782 0.716273 0 18.5198)"/>
+          </svg>
+        </button>
+        <h2 class="modal__title">Расскажите о своем проекте</h2>
+        <p class="modal__descr">Заполните все поля, и я свяжусь с вами в ближайшее время</p>
+      </div>
+      <form class="contact__form">
+        <label class="contact__label" for="tel">Телефон или почта</label>
+        <input id="" class="contact__input" type="text" placeholder="Введите телефон" name="contact" required>
+        <label class="contact__label" for="messenger">Выберите удобный способ связи</label>
+        <select id="" class="js-choice" name="feedback">
+          <option value="telegram" selected>Telegram</option>
+          <option value="whatsapp">WhatsApp</option>
+          <option value="viber">Viber</option>
+          <option value="call">Звонок на телефон</option>
+          <option value="sms">SMS сообщение</option>
+        </select>
+        <button class="btn-reset contact__btn" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
 

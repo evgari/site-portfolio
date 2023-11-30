@@ -112,7 +112,18 @@ blockquote {
 .link {
   transition: color .3s ease-in-out;
 
-  &:hover {
+  &:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid #000;
+  }
+
+  @media(min-width: $r_desk) {
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  &:active {
     color: $accent-color;
   }
 }
@@ -140,6 +151,10 @@ blockquote {
   display: inline-block;
   background-color: $light-color;
 }
+
+
+
+
 
 
 

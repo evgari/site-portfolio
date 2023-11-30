@@ -174,18 +174,30 @@
       font-size: 12px;
     }
 
-    &:hover {
+    &:focus-visible {
+      border-radius: 2px;
+      outline: 2px solid #000;
+    }
+
+    @media(min-width: $r_desk) {
+      &:hover {
+        background-color:  #ea0e00;
+      }
+    }
+
+    &:active {
       background-color:  #ea0e00;
     }
   }
 }
 
-.choices {
+.choices {  
   margin-bottom: 0;
 }
 
 .choices__inner {
   border: 0;
+  border-radius: 0;
   padding: 23.5px 20px!important;
   min-height: auto;
   font-size: 12px;
@@ -201,6 +213,11 @@
 
 .choices__list--single {
   padding: 0;
+}
+
+.choices.is-focused {
+  border-radius: 2px;
+  outline: 2px solid #000;
 }
 
 .is-open .choices__inner,

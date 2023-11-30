@@ -208,6 +208,7 @@
     height: 2px;
     background-color: transparent;
     transition: background-color .3s ease-in-out;
+    pointer-events: none;
 
     @media(max-width: $r_mob_500) {
       bottom: -5px;
@@ -215,7 +216,20 @@
     }
   }
 
-  &:hover {
+  &:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid #000;
+  }
+
+  @media(min-width: $r_desk) {
+    &:hover {
+      &::after {
+        background-color: $dark-color;
+      }
+    }
+  }
+
+  &:active {
     &::after {
       background-color: $dark-color;
     }
@@ -232,7 +246,18 @@
       font-size: 12px;
     }
 
-    &:hover {
+    &:focus-visible {
+      border-radius: 2px;
+      outline: 2px solid #000;
+    }
+
+    @media(min-width: $r_desk) {
+      &:hover {
+        color: $accent-color;
+      }
+    }
+
+    &:active {
       color: $accent-color;
     }
 
@@ -247,6 +272,7 @@
         background-color: $dark-color;
         opacity: .2;
         transform: translateY(-50%);
+        pointer-events: none;
 
         @media(max-width: $r_tab) {
           right: -10px;
