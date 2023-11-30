@@ -2,6 +2,11 @@
   padding-top: 90px;
   padding-bottom: 80px;
 
+  @media(max-width: $r_desk) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   @media(max-width: $r_mob_500) {
     padding-top: 29px;
     padding-bottom: 29px;

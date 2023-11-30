@@ -2,6 +2,11 @@
   padding-top: 90px;
   padding-bottom: 90px;
 
+  @media(max-width: $r_desk) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
   @media(max-width: $r_mob_500) {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -120,6 +125,75 @@
   width: 100%;
   text-align: center;
 
+  &__col {
+    width: 25%;
+    height: 147px;
+
+    @media(max-width: $r_tab_900) {
+      height: 90px;
+    }
+
+    @media(max-width: $r_mob_500) {
+      height: 43px;
+    }
+  }
+}
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &__text {
+    position: absolute;
+    z-index: 1;
+    bottom: -150px;
+    left: 50%;
+    padding: 30px 15px;
+    width: 232px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.5;
+    color: $light-color;
+    text-align: center;
+    background-color: #e31b1b;
+    visibility: hidden;
+    transform: translateX(-50%);
+    transition: visibility .3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -25px;
+      left: 110px;
+      border: 9px solid transparent;
+      border-bottom: 17px solid #e31b1b;
+    }
+
+    @media(max-width: $r_tab_900) {
+      width: 170px;
+      padding: 20px 10px;
+
+      &::before {
+        left: 80px;
+      }
+    }
+
+    @media(max-width: $r_tab) {
+      display: none;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 15px;
+
+    @media(max-width: $r_tab_900) {
+      margin-bottom: 5px;
+    }
+  }
+
   &__icon {
     filter: grayscale(1);
     opacity: .3;
@@ -136,23 +210,41 @@
     }
   }
 
-  &__col {
-    width: 25%;
-    height: 147px;
+  &:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid #000;
 
-    @media(max-width: $r_tab_900) {
-      height: 90px;
+    .tooltip__text {
+      visibility: visible;
     }
 
-    @media(max-width: $r_mob_500) {
-      height: 43px;
+    .tooltip__icon {
+      filter: grayscale(0);
+      opacity: .7;
     }
+  }
 
+  @media(min-width: $r_desk) {
     &:hover {
-      .table__icon {
+      .tooltip__text {
+        visibility: visible;
+      }
+
+      .tooltip__icon {
         filter: grayscale(0);
         opacity: .7;
       }
+    }
+  }
+
+  &:active {
+    .tooltip__text {
+      visibility: visible;
+    }
+
+    .tooltip__icon {
+      filter: grayscale(0);
+      opacity: .7;
     }
   }
 }
