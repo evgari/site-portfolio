@@ -165,7 +165,11 @@
 
   &__social {
     display: flex;
-    gap: 20px;
+    gap: 56px;
+
+    @media(max-width: $r_tab) {
+      gap: 20px;
+    }
 
     .social__link {
       font-size: 12px;
