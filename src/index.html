@@ -15,12 +15,6 @@
   <header class="header">
     <div class="container header__container">
       <nav class="nav header__nav">
-        <button class="btn-reset close js-burger-close">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <rect width="25.288" height="2.06669" transform="matrix(0.69782 0.716273 -0.69782 0.716273 2.35352 0.388428)"/>
-            <rect width="25.8556" height="2.06669" transform="matrix(0.69782 -0.716273 0.69782 0.716273 0 18.5198)"/>
-          </svg>
-        </button>
         <ul class="list-reset nav__list">
           <li class="nav__item">
             <a href="#about" class="link js-scroll-to">Обо мне</a>
@@ -38,27 +32,54 @@
             <a href="#feedback" class="link js-scroll-to">Обратная связь</a>
           </li>
         </ul>
-        <div class="header__links header__links_mobile">
-          <a href="tel:+79237777777" class="link header__phone">8 923 777-77-77</a>
-          <a href="mailto:alexdev@gmail.com" class="link header__email">alexdev@gmail.com</a>
-        </div>
-        <div class="social header__social">
-          <a href="#" class="social__link" target="_blank" aria-label="я в Вк">Vk</a>
-          <a href="#" class="social__link" target="_blank" aria-label="я в Instagram">Instagram</a>
-          <a href="#" class="social__link" target="_blank" aria-label="я в Linkedin">Linkedin</a>
-        </div>
       </nav>
       <div class="header__links">
         <a href="tel:+79237777777" class="link header__phone">8 923 777-77-77</a>
         <a href="mailto:alexdev@gmail.com" class="link header__email">alexdev@gmail.com</a>
       </div>
-      <button class="btn-reset burger">
+      <button class="btn-reset burger js-menu-open">
         <svg class="burger__icon" width="26" height="20" viewbox="0 0 26 20" fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
           <rect width="26" height="2" rx="0"/>
           <rect y="9" width="26" height="2" rx="0"/>
           <rect y="18" width="26" height="2" rx="0"/>
         </svg>
       </button>
+      <div class="menu js-mobile-menu">
+        <div class="menu__main">
+          <button class="btn-reset close js-menu-close">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <rect width="25.288" height="2.06669" transform="matrix(0.69782 0.716273 -0.69782 0.716273 2.35352 0.388428)"/>
+              <rect width="25.8556" height="2.06669" transform="matrix(0.69782 -0.716273 0.69782 0.716273 0 18.5198)"/>
+            </svg>
+          </button>
+          <ul class="list-reset menu__list">
+            <li class="menu__item">
+              <a href="#about" class="menu__link js-scroll-to">Обо мне</a>
+            </li>
+            <li class="menu__item">
+              <a href="#portfolio" class="menu__link js-scroll-to">Портфолио</a>
+            </li>
+            <li class="menu__item">
+              <a href="#work" class="menu__link js-scroll-to">Этапы работ</a>
+            </li>
+            <li class="menu__item">
+              <a href="#pricing" class="menu__link js-scroll-to">Цены</a>
+            </li>
+            <li class="menu__item">
+              <a href="#feedback" class="menu__link js-scroll-to">Обратная связь</a>
+            </li>
+          </ul>
+          <div class="menu__links">
+            <a href="tel:+79237777777" class="link header__phone">8 923 777-77-77</a>
+            <a href="mailto:alexdev@gmail.com" class="link header__email">alexdev@gmail.com</a>
+          </div>
+          <div class="social menu__social">
+            <a href="#" class="social__link" target="_blank" aria-label="я в Вк">Vk</a>
+            <a href="#" class="social__link" target="_blank" aria-label="я в Instagram">Instagram</a>
+            <a href="#" class="social__link" target="_blank" aria-label="я в Linkedin">Linkedin</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 

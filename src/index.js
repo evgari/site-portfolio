@@ -17,10 +17,9 @@ const select = () => {
   });
 };
 
-const burgerController = ({btnOpen, btnClose, menu}) => {
+const burgerController = ({btnOpen, btnClose, menu, activeClass}) => {
   const burgerBtn = document.querySelector(btnOpen);
   const burgerMenu = document.querySelector(menu);
-  const activeClass = `${menu.slice(1)}_active`;
 
   burgerBtn.addEventListener('click', () => {
     burgerMenu.classList.add(activeClass);
@@ -113,9 +112,10 @@ for (let anchor of anchors) {
 select();
 
 burgerController({
-  btnOpen: '.burger',
-  btnClose: '.js-burger-close',
-  menu: '.header__nav'
+  btnOpen: '.js-menu-open',
+  btnClose: '.js-menu-close',
+  menu: '.js-mobile-menu',
+  activeClass: 'menu_open'
 });
 
 modalController({
