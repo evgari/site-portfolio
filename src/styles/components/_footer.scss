@@ -28,28 +28,22 @@
   }
 
   &__links {
-    display: flex;
-    align-items: center;
-    padding-top: 3px;
-  }
-
-  &__email {
     position: relative;
     display: flex;
     align-items: center;
-    margin-left: 25px;
+    gap: 26px;
+    padding-top: 3px;
 
     &::before {
       content: '';
       position: absolute;
       top: 50%;
-      left: -14px;
+      left: calc(46% + 1px);
       width: 1px;
       height: 24px;
       background-color: $dark-color;
       opacity: .2;
       transform: translateY(-50%);
-      pointer-events: none;
     }
   }
 
@@ -73,11 +67,6 @@
     border-bottom: 1px solid currentColor;
     transition: color .3s ease-in-out;
 
-    &:focus {
-      border-radius: 2px;
-      outline: 2px solid #000;
-    }
-
     @media(min-width: $r_desk) {
       &:hover {
         color: $dark-color;
@@ -90,17 +79,5 @@
   }
 }
 
-.nav {
-  &__list {
-    @media(max-width: $r_tab) {
-      gap: 17px;
-    }
 
-    .link {
-      @media(max-width: $r_mob_500) {
-        font-size: 10px;
-      }
-    }
-  }
-}
 

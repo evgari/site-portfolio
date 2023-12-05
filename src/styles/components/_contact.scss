@@ -100,7 +100,7 @@
     @media(max-width: $r_tab) {
       flex-direction: column-reverse;
       align-items: center;
-      gap: 60px;
+      gap: 57px;
     }
 
     @media(max-width: $r_mob_500) {
@@ -109,15 +109,9 @@
     }
   }
 
-  &__links {
-    position: relative;
+  &__social {
     display: flex;
     align-items: flex-end;
-    gap: 56px;
-
-    @media(max-width: $r_tab) {
-      gap: 20px;
-    }
   }
 
   &__form {

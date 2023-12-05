@@ -34,7 +34,7 @@
         </ul>
       </nav>
       <div class="header__links">
-        <a href="tel:+79237777777" class="link header__phone">8 923 777-77-77</a>
+        <a href="tel:+79237777777" class="link">8 923 777-77-77</a>
         <a href="mailto:alexdev@gmail.com" class="link header__email">alexdev@gmail.com</a>
       </div>
       <button class="btn-reset burger js-menu-open">
@@ -70,13 +70,21 @@
             </li>
           </ul>
           <div class="menu__links">
-            <a href="tel:+79237777777" class="link header__phone">8 923 777-77-77</a>
-            <a href="mailto:alexdev@gmail.com" class="link header__email">alexdev@gmail.com</a>
+            <a href="tel:+79237777777" class="link">8 923 777-77-77</a>
+            <a href="mailto:alexdev@gmail.com" class="link">alexdev@gmail.com</a>
           </div>
           <div class="social menu__social">
-            <a href="#" class="social__link" target="_blank" aria-label="я в Вк">Vk</a>
-            <a href="#" class="social__link" target="_blank" aria-label="я в Instagram">Instagram</a>
-            <a href="#" class="social__link" target="_blank" aria-label="я в Linkedin">Linkedin</a>
+            <ul class="list-reset social__list">
+              <li class="social__item">
+                <a href="#" class="social__link" target="_blank" aria-label="я в Вк">Vk</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link" target="_blank" aria-label="я в Instagram">Instagram</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link" target="_blank" aria-label="я в Linkedin">Linkedin</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -92,13 +100,21 @@
           web-разработчик
           <span class="decore hero__title-decore" aria-hidden="true"></span>
         </h1>
-        <div class="border-block hero__socials">
+        <div class="border-block hero__links">
           <button class="btn-reset discussion">Обсудить проект</button>
-          <div class="social hero__links">
-            <span class="decore hero__links-decore" aria-hidden="true"></span>
-            <a href="#" class="social__link" target="_blank" aria-label="я в Вк">Vk</a>
-            <a href="#" class="social__link" target="_blank" aria-label="я в Instagram">Instagram</a>
-            <a href="#" class="social__link" target="_blank" aria-label="я в Linkedin">Linkedin</a>
+          <div class="social hero__social">
+            <span class="decore hero__social-decore" aria-hidden="true"></span>
+            <ul class="list-reset social__list">
+              <li class="social__item">
+                <a href="#" class="social__link" target="_blank" aria-label="я в Вк">Vk</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link" target="_blank" aria-label="я в Instagram">Instagram</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link" target="_blank" aria-label="я в Linkedin">Linkedin</a>
+              </li>
+            </ul>            
           </div>
         </div>
         <ul class="list-reset hero__skills">
@@ -240,42 +256,88 @@
             <p class="benefits__item-descr">Быстро устраню любую проблему на вашем сайте</p>
           </li>
         </ul>
-        <table class="table benefits__table">
-          <tr class="table__row">
-            <td class="table__col">
-              <img src="./images/html5.svg" alt="" class="tooltip__icon">
-            </td>
-            <td class="table__col">
-              <img src="./images/css3.svg" alt="" class="tooltip__icon">
-            </td>
-            <td class="table__col">
-              <button class="btn-reset tooltip">
-                <p class="tooltip__text">
-                  <span class="tooltip__title">JavaScript ES6+</span>
-                  Язык программирования высокого уровня, использующийся для придания интерактивности веб-страницам
-                </p>
-                <img src="./images/js.svg" alt="" class="tooltip__icon">
-              </button>
-            </td>
-            <td class="table__col">
-              <img src="./images/jquery.svg" alt="" class="tooltip__icon">
-            </td>
-          </tr>
-          <tr class="table__row">
-            <td class="table__col">
-              <img src="./images/boot.svg" alt="" class="tooltip__icon">
-            </td>
-            <td class="table__col">
-              <img src="./images/php.svg" alt="" class="tooltip__icon">
-            </td>
-            <td class="table__col">
-              <img src="./images/vue.svg" alt="" class="tooltip__icon">
-            </td>
-            <td class="table__col">
-              <img src="./images/wp.svg" alt="" class="tooltip__icon">
-            </td>
-          </tr>
-        </table>
+
+        <ul class="list-reset tools benefits__tools">
+          <li class="tools__item">
+            <button class="btn-reset tooltip">
+              <p class="tooltip__text tooltip__text_1">
+                <span class="tooltip__title">HTML5</span>
+                Язык для структурирования и представления содержимого всемирной паутины
+              </p>
+              <img src="./images/html5.svg" alt="" class="tooltip__icon tooltip__icon_1">
+            </button>
+          </li>
+
+          <li class="tools__item">
+            <button class="btn-reset tooltip">
+              <p class="tooltip__text tooltip__text_2">
+                <span class="tooltip__title">CSS</span>
+                Формальный язык декорирования и описания внешнего вида веб-страницы, написанного с использованием языка разметки
+              </p>
+              <img src="./images/css3.svg" alt="" class="tooltip__icon tooltip__icon_2">
+            </button>
+          </li>
+
+          <li class="tools__item">
+            <button class="btn-reset tooltip">
+              <p class="tooltip__text tooltip__text_3">
+                <span class="tooltip__title">JavaScript ES6+</span>
+                Язык программирования высокого уровня, использующийся для придания интерактивности веб-страницам
+              </p>
+              <img src="./images/js.svg" alt="" class="tooltip__icon tooltip__icon_3">
+            </button>
+          </li>
+
+          <li class="tools__item">
+            <button class="btn-reset tooltip">
+              <p class="tooltip__text tooltip__text_4">
+                <span class="tooltip__title">jQuery</span>
+                Набор функций JavaScript, фокусирующийся на взаимодействии JavaScript и HTML
+              </p>
+              <img src="./images/jquery.svg" alt="" class="tooltip__icon tooltip__icon_4">
+            </button>
+          </li>
+
+          <li class="tools__item">
+            <button class="btn-reset tooltip">
+              <p class="tooltip__text tooltip__text_5">
+                <span class="tooltip__title">Bootstrap</span>
+                Свободный набор инструментов для создания сайтов и веб-приложений
+              </p>
+              <img src="./images/boot.svg" alt="" class="tooltip__icon tooltip__icon_5">
+            </button>
+          </li>
+
+          <li class="tools__item">
+            <button class="btn-reset tooltip">
+              <p class="tooltip__text tooltip__text_6">
+                <span class="tooltip__title">PHP</span>
+                C-подобный скриптовый язык общего назначения, интенсивно применяемый для разработки веб-приложений
+              </p>
+              <img src="./images/php.svg" alt="" class="tooltip__icon tooltip__icon_6">
+            </button>
+          </li>
+
+          <li class="tools__item">
+            <button class="btn-reset tooltip">
+              <p class="tooltip__text tooltip__text_7">
+                <span class="tooltip__title">Vue.js</span>
+                JavaScript-фреймворк с открытым исходным кодом для создания пользовательских интерфейсов
+              </p>
+              <img src="./images/vue.svg" alt="" class="tooltip__icon tooltip__icon_7">
+            </button>
+          </li>
+
+          <li class="tools__item">
+            <button class="btn-reset tooltip">
+              <p class="tooltip__text tooltip__text_8">
+                <span class="tooltip__title">WordPress</span>
+                Свободно распространяемая система управления содержимым сайта с открытым исходным кодом; написана на PHP
+              </p>
+              <img src="./images/wp.svg" alt="" class="tooltip__icon tooltip__icon_8">
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
   
@@ -365,10 +427,18 @@
           </p>
         </div>
         <div class="border-block contact__content">
-          <div class="social contact__links">
-            <a href="#" class="social__link" target="_blank" aria-label="я в Вк">Vk</a>
-            <a href="#" class="social__link" target="_blank" aria-label="я в Instagram">Instagram</a>
-            <a href="#" class="social__link" target="_blank" aria-label="я в Linkedin">Linkedin</a>
+          <div class="social contact__social">
+            <ul class="list-reset social__list">
+              <li class="social__item">
+                <a href="#" class="social__link" target="_blank" aria-label="я в Вк">Vk</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link" target="_blank" aria-label="я в Instagram">Instagram</a>
+              </li>
+              <li class="social__item">
+                <a href="#" class="social__link" target="_blank" aria-label="я в Linkedin">Linkedin</a>
+              </li>
+            </ul>            
           </div>
           <form class="contact__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
             <label class="contact__label" for="tel">Телефон или почта</label>
@@ -409,8 +479,8 @@
           </li>
         </ul>
         <div class="footer__links">
-          <a href="tel:+79237777777" class="link footer__phone">8 923 777-77-77</a>
-          <a href="mailto:alexdev@gmail.com" class="link footer__email">alexdev@gmail.com</a>
+          <a href="tel:+79237777777" class="link">8 923 777-77-77</a>
+          <a href="mailto:alexdev@gmail.com" class="link">alexdev@gmail.com</a>
         </div>
       </div>
       <div class="footer__copy">

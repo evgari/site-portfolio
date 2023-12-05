@@ -1,8 +1,6 @@
 import 'normalize.css';
 import './styles/main.scss';
 
-const anchors = document.querySelectorAll('.js-scroll-to');
-
 const select = () => {
   const elements = document.querySelectorAll('.js-choice');
 
@@ -95,19 +93,6 @@ const modalController = ({modal, btnOpen, btnClose}) => {
   
   modalElem.addEventListener('click', closeModal);
 }
-
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    
-    const blockID = anchor.getAttribute('href');
-    
-    document.querySelector(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-};
 
 select();
 

@@ -104,11 +104,6 @@
   &__link {
     position: absolute;
     inset: 0;
-
-    &:focus-visible {
-      border-radius: 2px;
-      outline: 2px solid #000;
-    }
   }
 
   &__img {    

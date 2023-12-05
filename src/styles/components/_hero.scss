@@ -29,7 +29,7 @@
     letter-spacing: 2.2px;
 
     @media(max-width: $r_mob_500) {
-      margin-bottom: 95px;
+      margin-bottom: 94px;
       letter-spacing: 1px;
     }
 
@@ -87,25 +87,19 @@
     }
   }
 
-  &__socials {
+  &__links {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 60px;
+    padding-bottom: 59px;
 
     @media(max-width: $r_mob_500) {
-      padding-bottom: 41px;
+      padding-bottom: 39px;
     }
   }
 
-  &__links {
+  &__social {
     position: relative;
-    display: flex;
-    gap: 56px;
-
-    @media(max-width: $r_tab) {
-      gap: 20px;
-    }
 
     &-decore {
       top: 50%;
@@ -188,6 +182,7 @@
   padding-right: 33px;
   font-weight: 700;
   font-size: 16px;
+  line-height: 1.5;
   background-image: url(../images/icons/arrow.svg);
   background-position: right 60%;
   background-repeat: no-repeat;
@@ -216,11 +211,6 @@
     }
   }
 
-  &:focus-visible {
-    border-radius: 2px;
-    outline: 2px solid #000;
-  }
-
   @media(min-width: $r_desk) {
     &:hover {
       &::after {
@@ -237,18 +227,47 @@
 }
 
 .social {
-  &__link {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+
+    @media(max-width: $r_tab) {
+      gap: 21px;
+    }
+  }
+
+  &__item {
     position: relative;
+  }
+
+  &__item:not(:last-child) {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -30px;
+      width: 1px;
+      height: 24px;
+      background-color: rgba(1, 1, 1, 0.3);
+      transform: translateY(-50%);
+
+      @media(max-width: $r_tab) {
+        right: -11px;
+      }
+
+      @media(max-width: $r_mob_500) {
+        height: 15px;
+      }
+    }
+  }
+  
+  &__link {
     font-size: 16px;
     transition: color .3s ease-in-out;
 
     @media(max-width: $r_mob_500) {
       font-size: 12px;
-    }
-
-    &:focus-visible {
-      border-radius: 2px;
-      outline: 2px solid #000;
     }
 
     @media(min-width: $r_desk) {
@@ -259,29 +278,6 @@
 
     &:active {
       color: $accent-color;
-    }
-
-    &:not(:last-child) {
-      &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: -30px;
-        width: 1px;
-        height: 24px;
-        background-color: $dark-color;
-        opacity: .2;
-        transform: translateY(-50%);
-        pointer-events: none;
-
-        @media(max-width: $r_tab) {
-          right: -10px;
-        }
-
-        @media(max-width: $r_mob_500) {
-          height: 15px;
-        }
-      }
     }
   }
 }
