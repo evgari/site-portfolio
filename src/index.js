@@ -94,6 +94,45 @@ const modalController = ({modal, btnOpen, btnClose}) => {
   modalElem.addEventListener('click', closeModal);
 }
 
+const scrollShadow = () => {
+  const scrollPosition = window.scrollY;
+  const header = document.querySelector('.header');
+
+  if(scrollPosition > 50) {
+    header.style.boxShadow = '0 0 25px 5px #000';
+  } else {
+    header.style.boxShadow = 'none';
+  }
+};
+
+function throttle(callback, delay) {
+  let isWating = false;
+  let savedArgs = null;
+  let savedThis = null;
+
+  return function wrapper(...args) {
+    if(isWating) {
+      savedArgs = args;
+      savedThis = this;
+      return;
+    }
+
+    callback.apply(this, args);
+    isWating = true;
+
+    setTimeout(() => {
+      isWating = false;
+      if(savedThis) {
+        wrapper.apply(savedThis, savedArgs);
+        savedThis = null;
+        savedArgs = null;
+      }      
+    }, delay);
+  }
+}
+
+const shadowController = throttle(scrollShadow, 500);
+
 select();
 
 burgerController({
@@ -108,6 +147,10 @@ modalController({
   btnOpen: '.discussion',
   btnClose: '.js-modal-close'
 });
+  
+window.addEventListener('scroll', shadowController); 
+
+
 
 
 

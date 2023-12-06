@@ -168,11 +168,6 @@
       font-size: 12px;
     }
 
-    &:focus-visible {
-      border-radius: 2px;
-      outline: 2px solid #000;
-    }
-
     @media(min-width: $r_desk) {
       &:hover {
         background-color:  #ea0e00;
@@ -207,11 +202,6 @@
 
 .choices__list--single {
   padding: 0;
-}
-
-.choices.is-focused {
-  border-radius: 2px;
-  outline: 2px solid #000;
 }
 
 .is-open .choices__inner,
